@@ -1,28 +1,102 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
+
+body {
+    width: 900px;
+    margin: 40px auto;
+    font-family: 'trebuchet MS';
+    font-size: 14px;
+    color: #444;
+    text-align: center !important;
+}
+
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+    *border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;    
 }
 
-td, th {
-    border-top: 2px solid #d6d6d6;
-    border-bottom: 2px solid #d6d6d6;
-    text-align: left;
-    padding: 8px;
+.garis {
+    border: solid #ccc 1px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
 }
 
-tr:nth-child(even) {
-    background-color: #dbdcdd;
+.garis tbody tr:nth-child(even) {
+    background: #f5f5f5;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
 }
+ 
+.garis td, .garis th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+
+.garis th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+    text-align:center;
+}
+
+.garis td:first-child, .garis th:first-child {
+    border-left: none;
+}
+
+.garis th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.garis th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.garis th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.garis tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.garis tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+  
 </style>
 </head>
+
 <body>
-  <table>
+
+<h2>List of Employees</h2>
+ <table class="garis">
       <tr>
+          <th width="10">No</th>  
           <th>Name</th>
           <th>Position</th>
           <th>Office</th>
@@ -31,6 +105,7 @@ tr:nth-child(even) {
           <th>Salary</th>
       </tr>
       <tr>
+            <td>1</td> 
           <td>Airi Satou</td>
           <td>Accountant</td>
           <td>Tokyo</td>
@@ -39,6 +114,7 @@ tr:nth-child(even) {
           <td>$ 162,700</td>
       </tr>
       <tr>
+            <td>2</td> 
           <td>Angelica Ramons</td>
           <td>Administrator</td>
           <td>Seoul</td>
@@ -47,6 +123,7 @@ tr:nth-child(even) {
           <td>$ 162,700</td>
       </tr>
       <tr>
+            <td>3</td> 
           <td>Ashton Cox</td>
           <td>Techinician</td>
           <td>Jakarta</td>
@@ -55,6 +132,7 @@ tr:nth-child(even) {
           <td>$ 162,700</td>
       </tr>
       <tr>
+            <td>4</td> 
           <td>Btradleey Grerer</td>
           <td>Software Engineer</td>
           <td>Bangkok</td>
@@ -63,6 +141,7 @@ tr:nth-child(even) {
           <td>$ 162,700</td>
       </tr>
       <tr>
+            <td>5</td> 
           <td>John</td>
           <td>Software Tester</td>
           <td>Hanoi</td>
@@ -71,6 +150,7 @@ tr:nth-child(even) {
           <td>$ 162,700</td>
       </tr>
       <tr>
+            <td>6</td> 
           <td>Mary</td>
           <td>Quality Control</td>
           <td>Paris</td>
@@ -79,6 +159,7 @@ tr:nth-child(even) {
           <td>$ 162,700</td>
       </tr>
       <tr>
+            <td>7</td> 
           <td>July</td>
           <td>Manager</td>
           <td>London</td>
@@ -87,6 +168,7 @@ tr:nth-child(even) {
           <td>$ 162,700</td>
       </tr>
       <tr>
+            <td>8</td> 
           <td>June</td>
           <td>HRD</td>
           <td>Amsterdam</td>
@@ -95,6 +177,7 @@ tr:nth-child(even) {
           <td>$ 162,700</td>
       </tr>
       <tr>
+        <td>9</td> 
           <td>Jo</td>
           <td>Accountant</td>
           <td>Tokyo</td>
@@ -103,5 +186,4 @@ tr:nth-child(even) {
           <td>$ 162,700</td>
       </tr>
   </table>
-</body>
-</html>
+</body></html>
