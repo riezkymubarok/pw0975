@@ -2,13 +2,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <title>Layout Boostrap</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
      <link rel="stylesheet" type="text/css" href="fa/web-fonts-with-css/css/fontawesome-all.css">
      <link rel="stylesheet" type="text/css" href="style.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+     <script>
+     	var app = angular.module("myApp", ["ngRoute"]);
+			app.config(function($routeProvider){
+				$routeProvider
+			    .when("/", {
+			        templateUrl : "main.htm"
+			    })
+			    .when("/about", {
+			        templateUrl : "about.htm"
+			    })
+			    .when("/product", {
+			        templateUrl : "product.htm"
+			    })
+			    .when("/contact", {
+			        templateUrl : "contact.htm"
+			    })
+			});
+     </script>
+
   </head>
   <body>
-  		<div class="container-fluid">
+  		<div ng-app="myApp" class="container-fluid">
 	  		<div class="row">
 		  		<div class="col-md-12 header">
 		  			<h1>Title of the web</h1>
@@ -16,35 +39,13 @@
 		  	</div>	
 	  		<div class="row">
 		  		<div class="col-md-12 menu">
-		  			Some menu will placed here!
+		  			<a href="#/!"><i class="fab fa-algolia"></i> Home</a> |
+		  			<a href="#!about"> About</a> |
+		  			<a href="#!product"> Product</a> |
+		  			<a href="#!contact"> Contact</a>
 		  		</div>
   			</div>
-  			<div class="row">
-		  		<div class="col-md-4">
-		  			<div>
-		  				<h1><i class="fas fa-angle-double-right"></i></h1>
-		  			</div>
-		  			<p>
-		  				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-		  			</p>
-		  		</div>
-		  		<div class="col-md-4">
-		  			<div>
-		  				<h1><i class="fab fa-algolia"></i></h1>
-		  			</div>
-		  			<p>
-		  				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-		  			</p>
-		  		</div>
-		  		<div class="col-md-4">
-		  			<div>
-		  				<h1><i class="fab fa-angellist"></i></h1>
-		  			</div>
-		  			<p>
-		  				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-		  			</p>
-		  		</div>
-  			</div>
+  			 <ng-view></ng-view> 
   			<!--
   			<h1>My First Boostrap Page</h1>
   			<p>This is some text.</p>
